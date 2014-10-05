@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Converters="clr-namespace:FiveMinds.MindAssist.SimpleTodoAppXamarin.Converters;assembly=SimpleTodoAppXamarin"
+             x:Class="FiveMinds.MindAssist.SimpleTodoAppXamarin.Views.TaskPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Converters:TagsConverter x:Key="TagsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Title -->
+        <StackLayout Padding="0, 0, 0, 10">
+            <Label Text="Title" />
+            <Entry Text="{Binding Title}" />
+        </StackLayout>
+        
+        <!-- Note -->
+        <StackLayout Padding="0, 0, 0, 10">
+            <Label Text="Note" />
+            <Entry Text="{Binding Note}" />
+        </StackLayout>
+
+        <!-- Tags -->
+        <StackLayout Padding="0, 0, 0, 10">
+            <Label Text="Tags" />
+            <Entry Text="{Binding Tags, Converter={StaticResource TagsConverter}" />
+        </StackLayout>
+
+        <!-- Done -->
+        <StackLayout Padding="0, 0, 0, 10">
+            <Label Text="Done" />
+            <Switch IsToggled="{Binding Done}" />
+        </StackLayout>
+
+        <!-- Button -->
+        <Button x:Name="SaveButton" Text="Save" TextColor="Green" />
+        <Button x:Name="DeleteButton" Text="Delete" TextColor="Red" />
+
+    </StackLayout>
+</ContentPage>

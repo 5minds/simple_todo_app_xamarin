@@ -1,0 +1,9 @@
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\SimpleTodoAppXamarin.dll
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\SimpleTodoAppXamarin.pdb
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\Xamarin.Forms.Core.dll
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\Xamarin.Forms.Core.xml
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\obj\Debug\SimpleTodoAppXamarin.csprojResolveAssemblyReference.cache
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\obj\Debug\SimpleTodoAppXamarin.dll
+C:\Projects\SimpleTodoAppXamarin\SimpleTodoAppXamarin\SimpleTodoAppXamarin\obj\Debug\SimpleTodoAppXamarin.pdb
