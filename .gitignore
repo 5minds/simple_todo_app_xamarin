@@ -2,3 +2,5 @@
 !packages/repositories.config
 *.sln.DotSettings
 *.userprefs
+**/bin
+**/obj
