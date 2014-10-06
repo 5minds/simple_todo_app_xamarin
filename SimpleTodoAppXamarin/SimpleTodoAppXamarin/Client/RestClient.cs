@@ -13,7 +13,8 @@ namespace FiveMinds.MindAssist.SimpleTodoAppXamarin.Client
     {
         #region Private Fields
 
-        private const string RestServiceBaseAddress = "http://broeber-t.tunnlr.com/";
+        //private const string RestServiceBaseAddress = "http://broeber-t.tunnlr.com/";
+		private const string RestServiceBaseAddress = "http://www.mindassist.net:8080/";
         private const string AcceptHeaderApplicationJson = "application/json";
 
         #endregion 
