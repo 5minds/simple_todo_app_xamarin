@@ -53,7 +53,21 @@ namespace FiveMinds.MindAssist.SimpleTodoAppXamarin.Views
                     Navigation.PushAsync(taskPage);
                 }, 0, 0);
             }
-            ToolbarItems.Add(toolBarItem);
+
+			if (Device.OS == TargetPlatform.Android) 
+			{
+				toolBarItem = new ToolbarItem("+", "plus", () =>
+				{
+					var task = new Model.Task();
+					var taskPage = new TaskPage(TaskPage.TaskPageMode.Create) {BindingContext = task, Title="New Task"};
+					Navigation.PushAsync(taskPage);
+				}, 0, 0);
+			}
+
+			if (toolBarItem != null) {
+				ToolbarItems.Add(toolBarItem);
+			}
+
 
             this.TaskList = new List<Model.Task>();// { new Model.Task {Title = "Haha", Done = false}};
         }

@@ -214,7 +214,7 @@ Global
 		{F367C9E1-17D8-43CF-9438-DC6555EAC91F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = SimpleTodoAppXamarin\SimpleTodoAppXamarin.iOS\SimpleTodoAppXamarin.iOS.csproj
+		StartupItem = SimpleTodoAppXamarin\SimpleTodoAppXamarin.Android\SimpleTodoAppXamarin.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
