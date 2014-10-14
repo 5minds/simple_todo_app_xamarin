@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FiveMinds.MindAssist.SimpleTodoAppXamarin.Annotations;
 using FiveMinds.MindAssist.SimpleTodoAppXamarin.Client;
 using Xamarin.Forms;
+using System;
 
 namespace FiveMinds.MindAssist.SimpleTodoAppXamarin.Views
 {
@@ -44,24 +45,25 @@ namespace FiveMinds.MindAssist.SimpleTodoAppXamarin.Views
 
             // Add ToolBarItem
             ToolbarItem toolBarItem = null;
+
+			Action toolbarItemAction = () =>
+			{
+				var task = new Model.Task();
+				var taskPage = new TaskPage(TaskPage.TaskPageMode.Create) {BindingContext = task, Title="New Task"};
+				Navigation.PushAsync(taskPage);
+			};
+
+			// Alternative: 				
+			//TODO: toolBarItem = new ToolbarItem("+", Device.OnPlatform(iOS: null, Android: "plus"), toolbarItemAction, 0, 0);
+
             if (Device.OS == TargetPlatform.iOS)
             {
-                toolBarItem = new ToolbarItem("+", null, () =>
-                {
-                    var task = new Model.Task();
-                    var taskPage = new TaskPage(TaskPage.TaskPageMode.Create) {BindingContext = task, Title="New Task"};
-                    Navigation.PushAsync(taskPage);
-                }, 0, 0);
+				toolBarItem = new ToolbarItem("+", null, toolbarItemAction, 0, 0);
             }
 
 			if (Device.OS == TargetPlatform.Android) 
 			{
-				toolBarItem = new ToolbarItem("+", "plus", () =>
-				{
-					var task = new Model.Task();
-					var taskPage = new TaskPage(TaskPage.TaskPageMode.Create) {BindingContext = task, Title="New Task"};
-					Navigation.PushAsync(taskPage);
-				}, 0, 0);
+				toolBarItem = new ToolbarItem("+", "plus", toolbarItemAction, 0, 0);
 			}
 
 			if (toolBarItem != null) {
@@ -83,7 +85,10 @@ namespace FiveMinds.MindAssist.SimpleTodoAppXamarin.Views
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+
+			if (handler != null) {
+				handler(this, new PropertyChangedEventArgs(propertyName));
+			}
         }
 
         protected override void OnAppearing()
